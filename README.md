@@ -36,7 +36,7 @@ Password: admin
 4. Add Dashboard:
 * Navigate to the dashboards section in Grafana.
 (Select the option to add or upload a dashboard.)
-* Use the dashboard template provided in the repository (docker-logs-dashboard.json). This template is pre-configured with queries to display logs from various running containers.
+* Use the dashboard template provided in the repository (docker-logs-dashboard.json). This template is pre-configured with queries to display logs from various running containers running .
 
-5. Ready to Monitor
-*Your setup is now complete. You should be able to monitor the Docker container logs directly from the Grafana dashboard.
+5. Ready to Monitor:
+* Your setup is now complete. You should be able to monitor the Docker container logs directly from the Grafana dashboard.
