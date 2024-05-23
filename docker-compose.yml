@@ -1,0 +1,35 @@
+version: "3"
+networks:
+  loki:
+services:
+  loki:
+    image: grafana/loki:2.9.4
+    volumes:
+      - /home/naveenbunny/aggregation/loki:/etc/loki
+    ports:
+      - "3100:3100"
+    restart: unless-stopped
+    command: -config.file=/etc/loki/loki-config.yml
+    networks:
+      - loki
+  promtail:
+    image: grafana/promtail:2.9.4
+    volumes:
+      - /var/log:/var/log
+      - /home/naveenbunny/aggregation/promtail:/etc/promtail
+    # ports:
+    #   - "1514:1514" # this is only needed if you are going to send syslogs
+    restart: unless-stopped
+    command: -config.file=/etc/promtail/promtail-config.yml
+    networks:
+      - loki
+  grafana:
+    image: grafana/grafana-oss:latest
+    user: "1000"
+    volumes:
+    - /home/naveenbunny/aggregation/grafana:/var/lib/grafana
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    networks:
+      - loki
