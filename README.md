@@ -20,6 +20,10 @@ cd <repository_directory>
 ```bash
 docker-compose up -d
 ```
+or 
+```bash
+docker compose up -d
+```
 
 ### 2. Access Grafana
 Open your web browser and navigate to:
