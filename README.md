@@ -16,6 +16,7 @@ git clone <repository_url>
 ```bash
 cd <repository_directory>
 ```
+* Make sure you check your port numbers in docker-compose.yml file
 ```bash
 docker-compose up -d
 ```
