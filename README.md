@@ -21,22 +21,22 @@ cd <repository_directory>
 docker-compose up -d
 ```
 
-2. Access Grafana
+### 2. Access Grafana
 Open your web browser and navigate to:
 ```bash
 http://localhost:3000
 ```
-3. Grafana Credentials
+### 3. Grafana Credentials
 Use the default credentials to log in:
 ```bash
 Username: admin
 Password: admin
 ```
 
-4. Add Dashboard:
+### 4. Add Dashboard:
 * Navigate to the dashboards section in Grafana.
 (Select the option to add or upload a dashboard.)
 * Use the dashboard template provided in the repository (docker-logs-dashboard.json). This template is pre-configured with queries to display logs from various running containers running .
 
-5. Ready to Monitor:
+### 5. Ready to Monitor:
 * Your setup is now complete. You should be able to monitor the Docker container logs directly from the Grafana dashboard.
